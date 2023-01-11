@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shop_ui_app/models/Product.dart';
+import 'package:shop_ui_app/screen/detail/detail_screen.dart';
 import 'product_cart.dart';
 import 'selection_title.dart';
 
@@ -25,7 +26,17 @@ class NewArrival extends StatelessWidget {
                 title: demo_product[index].title,
                 price: demo_product[index].price,
                 image: demo_product[index].image,
-                // bgColor: demo_product[index].bgColor,
+                bgColor: demo_product[index].bgColor,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailScreen(
+                        product: demo_product[index],
+                      ),
+                    ),
+                  );
+                },
               );
             }),
           ),

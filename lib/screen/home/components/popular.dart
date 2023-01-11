@@ -26,7 +26,8 @@ class Popular extends StatelessWidget {
                 title: demo_product[index].title,
                 price: demo_product[index].price,
                 image: demo_product[index].image,
-                // bgColor: demo_product[index].bgColor,
+                bgColor: demo_product[index].bgColor,
+                press: () {},
               );
             }),
           ),

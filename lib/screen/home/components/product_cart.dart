@@ -7,6 +7,7 @@ class ProductCart extends StatelessWidget {
     required this.title,
     required this.price,
     required this.image,
+    required this.press,
     this.bgColor = const Color(0xFFEFEFF2),
   }) : super(key: key);
 
@@ -14,11 +15,12 @@ class ProductCart extends StatelessWidget {
   final int price;
   final String image;
   final Color bgColor;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: press,
       child: Container(
         width: 154,
         padding: const EdgeInsets.all(defaultPadding / 2),
